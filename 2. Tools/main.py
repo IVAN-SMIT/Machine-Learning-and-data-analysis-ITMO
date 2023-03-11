@@ -1,7 +1,7 @@
 import pandas as pd
 
 # загрузка данных из файла csv
-df = pd.read_csv(r'ROSSTAT_SALARY_RU.csv', encoding="UTF-8")
+df = pd.read_csv(r'../ROSSTAT_SALARY_RU.csv', encoding="UTF-8")
 
 # удаление строк с регионами, которые не нужны
 df = df.set_index("region_name").drop(['Республика Северная Осетия-Алания','Томская область','Ивановская область'], axis = 0)
