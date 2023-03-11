@@ -1,9 +1,11 @@
+
 from PIL import Image
 import numpy as np
 import pandas as pd
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
-from IPython.display import Image
+from matplotlib import pyplot as plt
+
 
 
 
@@ -59,5 +61,12 @@ img = Image.fromarray(X_restored.astype('uint8'))
 img.save('restored_image.png')
 print("Сопоставьте фото с номером")
 
-
+from IPython.display import Image
 Image(filename='restored_image.png')
+
+answ = plt.imread('restored_image.png')
+plt.imshow(answ)
+plt.show()
+
+
+
